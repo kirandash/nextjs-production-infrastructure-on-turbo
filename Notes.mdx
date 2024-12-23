@@ -74,3 +74,19 @@
     - this will give you a clean import
     - also it will hide implementation details viz server first or client first
 - Note: .client and .server are just naming conventions and not mandatory in next.js but in remix it is mandatory
+
+### Lego Components in monorepo
+
+- https://nextjs.org/learn/react-foundations/building-ui-with-components
+- move PostList from company-website to packages/ui
+  - use PostList in web
+- create new nextjs app
+  - `cd apps`
+  - `pnpm dlx create-next-app@latest company-website-2 --use-pnpm`
+  - use PostList in company-website-2
+- Note: when we move the PostList component to packages/ui, the tailwind styles will not work. To make it work, you have to add the path in tailwind.config.js
+- Lego component vs Microfrontend?:
+  - Lego components is similar to microfrontend architecture where you have a shared ui library that can be used by multiple apps
+  - The architecture is similar to microfrontend
+  - in microfrontend, runtime module federation is used to load the components but in monorepo, the components are built together. next.js app router is not compatible with module federation
+  - The difference is that in microfrontend, the apps are independent and can be deployed independently while In monorepo, all the apps are deployed together

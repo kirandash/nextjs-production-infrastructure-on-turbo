@@ -1,5 +1,5 @@
-import { Post } from "../types";
 import PostListClient from "./PostList.client";
+import { Post } from "./types";
 
 async function getPosts(page: number, limit: number): Promise<Post[]> {
   "use server";

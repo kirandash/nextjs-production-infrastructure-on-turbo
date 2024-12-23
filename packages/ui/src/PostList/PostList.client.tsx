@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Post } from "../types";
+import type { Post } from "./types";
 
 interface PostListClientProps {
   initialPosts: Post[];
