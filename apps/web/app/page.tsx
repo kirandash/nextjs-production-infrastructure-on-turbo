@@ -66,6 +66,9 @@ export default function Home() {
         <Button appName="web" className={styles.secondary}>
           Open alert
         </Button>
+        <Button appName="default turbo web" className={styles.secondary}>
+          Click here!
+        </Button>
       </main>
       <footer className={styles.footer}>
         <a
