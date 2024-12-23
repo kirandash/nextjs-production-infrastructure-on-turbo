@@ -36,3 +36,10 @@
   - `cd packages/ui`
   - `npx sb@latest init` or `pnpm dlx sb@latest init`
   - if you want to use your own docs then turn off `autodocs`
+- app i.e. apps/company-website
+  - `cd apps/company-website`
+  - `npx sb@latest init` or `pnpm dlx sb@latest init`
+  - add tailwind to storybook
+    - `pnpm dlx storybook@latest add @storybook/addon-styling-webpack`
+    - https://storybook.js.org/addons/@storybook/addon-styling-webpack
+    - add import "../src/app/global.css"; to .storybook/preview.js
