@@ -14,3 +14,10 @@
   - ex: "@repo/eslint-config"
 - Copy tsconfig.json from web app to company-website app so that we can use the ts config from packages
 - install the changes at root level: `pnpm i`
+
+### use rimraf to delete node_modules
+
+- `pnpm add rimraf -D`
+  - to force: `pnpm add rimraf -D --workspace-root` or `pnpm add rimraf -D -w`
+- add clean script in package.json
+- `pnpm clean`
