@@ -47,6 +47,7 @@
     - https://storybook.js.org/blog/storybook-react-server-components/
     - TODO: Currently RSC is working but posts API in network is causing an infinite loop and breaking the page
 - (My personal favorite) storybook for the monorepo root by creating a separate react application for storybook
+
   - `cd apps`
   - `pnpm create vite storybook --template react-ts`
     - we are using vite to create the react app because it is faster than CRA and ideal for creating storybook app
@@ -54,3 +55,10 @@
     - init storybook
       - `cd apps/storybook`
       - `pnpm dlx sb@latest init`
+
+- Run all storybooks together using turborepo
+  - change ports in package.json for storybook run scripts to 6007 and 6008 respectively
+  - in turbo.json add a definition for a storybook task
+  - go to the root of the monorepo and run a turbo task ie `pnpm turbo storybook`
+    - this will all run all the storybook scripts in all package.json files
+- Feel free to use a combination of the 3 above options and then use turbo to run all of them together
