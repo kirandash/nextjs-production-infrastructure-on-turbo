@@ -62,3 +62,15 @@
   - go to the root of the monorepo and run a turbo task ie `pnpm turbo storybook`
     - this will all run all the storybook scripts in all package.json files
 - Feel free to use a combination of the 3 above options and then use turbo to run all of them together
+
+### How to Organize and name server, client components in monorepo
+
+- Ex:
+  - Posts List page: page.tsx
+  - Posts List: PostList.server.tsx this will call the getPosts API and show the list of posts
+    - RSC
+  - Posts List Client: PostList.client.tsx
+  - use index.ts in PostList folder to export both PostList.server.tsx and PostList.client.tsx
+    - this will give you a clean import
+    - also it will hide implementation details viz server first or client first
+- Note: .client and .server are just naming conventions and not mandatory in next.js but in remix it is mandatory
