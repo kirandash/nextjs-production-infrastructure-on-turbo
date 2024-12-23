@@ -9,3 +9,8 @@
 - To create a new app in the monorepo
   - `cd apps`
   - `pnpm dlx create-next-app@latest company-website --use-pnpm`
+- Copy eslint.config.js from web app to company-website app so that we can use the eslint config from packages
+- Copy dependencies from web app to company-website app
+  - ex: "@repo/eslint-config"
+- Copy tsconfig.json from web app to company-website app so that we can use the ts config from packages
+- install the changes at root level: `pnpm i`
