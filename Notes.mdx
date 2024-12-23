@@ -46,7 +46,11 @@
   - Storybook for Async RSC (Experimental)
     - https://storybook.js.org/blog/storybook-react-server-components/
     - TODO: Currently RSC is working but posts API in network is causing an infinite loop and breaking the page
-- storybook for the monorepo root by creating a separate react application for storybook
+- (My personal favorite) storybook for the monorepo root by creating a separate react application for storybook
   - `cd apps`
   - `pnpm create vite storybook --template react-ts`
     - we are using vite to create the react app because it is faster than CRA and ideal for creating storybook app
+    - config ts
+    - init storybook
+      - `cd apps/storybook`
+      - `pnpm dlx sb@latest init`
