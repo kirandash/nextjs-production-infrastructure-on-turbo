@@ -43,6 +43,10 @@
     - `pnpm dlx storybook@latest add @storybook/addon-styling-webpack`
     - https://storybook.js.org/addons/@storybook/addon-styling-webpack
     - add import "../src/app/global.css"; to .storybook/preview.js
-- Storybook for Async RSC (Experimental)
-  - https://storybook.js.org/blog/storybook-react-server-components/
-  - TODO: Currently RSC is working but posts API in network is causing an infinite loop and breaking the page
+  - Storybook for Async RSC (Experimental)
+    - https://storybook.js.org/blog/storybook-react-server-components/
+    - TODO: Currently RSC is working but posts API in network is causing an infinite loop and breaking the page
+- storybook for the monorepo root by creating a separate react application for storybook
+  - `cd apps`
+  - `pnpm create vite storybook --template react-ts`
+    - we are using vite to create the react app because it is faster than CRA and ideal for creating storybook app
