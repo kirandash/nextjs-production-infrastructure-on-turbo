@@ -6,7 +6,9 @@ interface Post {
 }
 
 async function getPosts(): Promise<Post[]> {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const response = await fetch(
+    `${process.env.POSTS_API ?? "https://jsonplaceholder.typicode.com"}/posts`
+  );
 
   if (!response.ok) {
     throw new Error("Failed to fetch posts");

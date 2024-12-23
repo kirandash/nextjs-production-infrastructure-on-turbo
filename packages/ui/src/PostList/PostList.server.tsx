@@ -4,7 +4,7 @@ import { Post } from "./types";
 async function getPosts(page: number, limit: number): Promise<Post[]> {
   "use server";
   const response = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?_start=${page * 10}&_limit=${limit}`
+    `${process.env.POSTS_API ?? "https://jsonplaceholder.typicode.com"}/posts?_start=${page * 10}&_limit=${limit}`
   );
 
   if (!response.ok) {
