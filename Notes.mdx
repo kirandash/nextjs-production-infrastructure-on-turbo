@@ -21,3 +21,17 @@
   - to force: `pnpm add rimraf -D --workspace-root` or `pnpm add rimraf -D -w`
 - add clean script in package.json
 - `pnpm clean`
+
+### Storybook in monorepo
+
+- Question:
+
+  - where to put storybook?
+    - with the ui library?
+    - with the app?
+    - with the monorepo root that has all components from the monorepo which is the apps and the ui libraries?
+
+- We will see all the options
+- ui library i.e. packages/ui
+  - `cd packages/ui`
+  - `npx sb@latest init` or `pnpm dlx sb@latest init`
